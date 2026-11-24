@@ -88,7 +88,7 @@ h2::after{content:"";display:block;width:54px;height:3px;background:var(--gold);
 
 /* pastor */
 .soft{background:var(--blush)}
-.<div class="arch"><img src="culto.jpg" alt="El pastor predicando en Casa de Oración Dalmanuta" fetchpriority="high" onerror="this.remove()"></div>}
+.pastor{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(30px,6vw,76px);align-items:center}
 .frame{position:relative}
 .frame::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:2px solid var(--gold);border-radius:26px}
 .frame img{position:relative;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:0 center;border-radius:26px;box-shadow:0 24px 50px rgba(20,38,77,.22);background:var(--rose)}
@@ -101,7 +101,7 @@ h2::after{content:"";display:block;width:54px;height:3px;background:var(--gold);
 .gal figure{border-radius:16px;overflow:hidden;cursor:zoom-in;background:var(--blush)}
 .gal figure:first-child{grid-column:span 2}
 .gal img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.<a class="card rv" href="#oracion"><img src="g2.jpg" alt="La congregación orando con las manos alzadas" onerror="this.remove()"><div><h3>Oración</h3><span>Pedir oración →</span></div></a>}
+.gal figure:hover img{transform:scale(1.06)}
 @media(max-width:700px){.gal{grid-template-columns:1fr 1fr}.gal figure:first-child{grid-column:span 2}}
 .lb{position:fixed;inset:0;z-index:100;display:none;place-items:center;padding:20px;background:rgba(8,14,32,.94);cursor:zoom-out}
 .lb.open{display:grid}
@@ -111,7 +111,7 @@ h2::after{content:"";display:block;width:54px;height:3px;background:var(--gold);
 .slots{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:2.2rem}
 .slot{background:#fff;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:18px;padding:1.6rem 1.4rem}
 .slot small{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--wine);font-weight:600}
-.<div class="frame rv"><img src="culto.jpg" alt="El pastor predicando la Palabra" onerror="this.remove()"></div>}
+.slot b{display:block;font:700 2.5rem/1.15 var(--serif);color:var(--navy)}
 .slot p{color:var(--muted);font-size:.95rem}
 
 /* oración */
@@ -158,7 +158,7 @@ footer b{display:block;font:700 1.3rem var(--serif);color:#fff}
     <li><a href="#inicio">Inicio</a></li>
     <li><a href="#descubre">Descubre</a></li>
     <li><a href="#pastor">Pastor</a></li>
-    <img class="rv" src="adoracion.jpg" alt="Fachada de la Casa de Oración Dalmanuta de noche" onerror="this.remove()">
+    <li><a href="#galeria">Galería</a></li>
     <li><a href="#horarios">Horarios</a></li>
     <li><a href="#oracion">Oración</a></li>
     <li><a href="#contacto">Contacto</a></li>
@@ -167,11 +167,11 @@ footer b{display:block;font:700 1.3rem var(--serif);color:#fff}
 
 <main>
 
-<!-- PORTADA: foto hero.jpg -->
+<!-- PORTADA: foto culto.jpg -->
 <section class="hero" id="inicio">
   <div class="sun" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="arch"><img src="hero.jpg" alt="El pastor predicando en Casa de Oración Dalmanuta" fetchpriority="high" onerror="this.remove()"></div>
+    <div class="arch"><img src="culto.jpg" alt="El pastor predicando en Casa de Oración Dalmanuta" fetchpriority="high" onerror="this.remove()"></div>
     <div>
       <span class="eyebrow">Bienvenidos a</span>
       <h1>Casa de Oración <em>Dalmanuta</em></h1>
@@ -184,7 +184,7 @@ footer b{display:block;font:700 1.3rem var(--serif);color:#fff}
   </div>
 </section>
 
-<!-- DESCUBRE: fotos adoracion.jpg, oracion.jpg, comunidad.jpg -->
+<!-- DESCUBRE -->
 <section id="descubre">
   <div class="wrap">
     <div class="c rv">
@@ -194,16 +194,16 @@ footer b{display:block;font:700 1.3rem var(--serif);color:#fff}
     </div>
     <div class="cards">
       <a class="card rv" href="#galeria"><img src="adoracion.jpg" alt="Alabanza y adoración" onerror="this.remove()"><div><h3>Adoración</h3><span>Ver galería →</span></div></a>
-      <a class="card rv" href="#oracion"><img src="oracion.jpg" alt="La congregación orando con las manos alzadas" onerror="this.remove()"><div><h3>Oración</h3><span>Pedir oración →</span></div></a>
+      <a class="card rv" href="#oracion"><img src="g2.jpg" alt="La congregación orando con las manos alzadas" onerror="this.remove()"><div><h3>Oración</h3><span>Pedir oración →</span></div></a>
       <a class="card rv" href="#contacto"><img src="comunidad.jpg" alt="La congregación orando en círculo junto al pastor" onerror="this.remove()"><div><h3>Una familia</h3><span>Contáctanos →</span></div></a>
     </div>
   </div>
 </section>
 
-<!-- PASTOR: foto pastor.jpg -->
+<!-- PASTOR -->
 <section class="soft" id="pastor">
   <div class="wrap pastor">
-    <div class="frame rv"><img src="pastor.jpg" alt="El pastor predicando la Palabra" onerror="this.remove()"></div>
+    <div class="frame rv"><img src="culto.jpg" alt="El pastor predicando la Palabra" onerror="this.remove()"></div>
     <div class="rv">
       <span class="eyebrow">Nuestro pastor</span>
       <h2>Un pastor que ora contigo</h2>
@@ -217,7 +217,7 @@ footer b{display:block;font:700 1.3rem var(--serif);color:#fff}
   </div>
 </section>
 
-<!-- GALERÍA: culto.jpg, g1.jpg a g4.jpg -->
+<!-- GALERÍA -->
 <section id="galeria">
   <div class="wrap">
     <div class="c rv">
@@ -268,10 +268,10 @@ footer b{display:block;font:700 1.3rem var(--serif);color:#fff}
   </div>
 </section>
 
-<!-- CONTACTO: foto templo.jpg -->
+<!-- CONTACTO -->
 <section id="contacto">
   <div class="wrap cgrid">
-    <img class="rv" src="templo.jpg" alt="Fachada de la Casa de Oración Dalmanuta de noche" onerror="this.remove()">
+    <img class="rv" src="adoracion.jpg" alt="Fachada de la Casa de Oración Dalmanuta de noche" onerror="this.remove()">
     <div class="rv">
       <span class="eyebrow">Contacto</span>
       <h2>Estamos para servirte</h2>
@@ -329,5 +329,4 @@ footer b{display:block;font:700 1.3rem var(--serif);color:#fff}
 })();
 </script>
 </body>
-      </html>
-                                           
+        </html>
